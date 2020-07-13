@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- option 1 With JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!-- funnel library -->
+    <script src="https://code.highcharts.com/modules/funnel.js"></script>
+    <meta charset="utf-8">
+    <title> Lalit Ojha</title>
+</head>
+
+<body>
+
+    <script>
+        var options = {
+
+            chart: {
+                renderTo: 'container',
+                type: 'funnel',
+                marginRight: 100,
+            },
+            title: {
+                text: 'sales funnel',
+                x: -50,
+            },
+            legend: {
+                enabled: false
+            },
+
+            series: [{
+                name: 'Unique Users',
+                data: [
+                    ['Website Visits', 15654],
+                    ['Downloads', 4064],
+                    ['Requested Price List', 1987],
+                    ['Invoices sent', 976],
+                    ['Finalised', 846]                
+                ]
+            }]
+        };
+    //   build charts using options above
+        $(document).ready(function () {
+
+            var chart = new Highcharts.Chart(options);
+
+
+        })
+
+    </script>
+
+
+    <div id="container"></div>
+
+</body>
+
+</html>
